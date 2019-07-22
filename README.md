@@ -40,9 +40,9 @@ Instructions:
       ```
    1. cause the PEP to fire:
    ```
-   imkdir srcDir ; touch VERSION.json ; iput VERSION.json srcdir
+   imkdir srcDir ; touch VERSION.json ; iput VERSION.json srcDir
    imkdir dstDir
-   icp srcDir/VERSION.json dstDir
+   icp srcDir/VERSION.json dstDir/VERSION.json
 
    ```
 ---
@@ -127,7 +127,7 @@ Jul 22 16:25:27 pid:6816 NOTICE: writeLine: inString = s ->
         >objPath ->
             &<class 'irods_types.char_array'> @ 0x7f11bc66bb90
             *OBJECT of class "char_array":
-            |'/tempZone/home/rods/srcdir/VERSION.json'
+            |'/tempZone/home/rods/srcDir/VERSION.json'
         >offset ->
             &<type 'long'> @ 0x7f11be240150
             *OBJECT of class "long":
