@@ -11,7 +11,7 @@ Instructions:
       ```
       sudo su - irods -c "ln -s ${SOME_DIR}/myinspect.py /etc/irods"
       ```
-   1. create a PEP (Policy Enforcement Point) within ``/etc/irods/core.py` ; try for example prepending the following text to that file:
+   1. create a PEP (Policy Enforcement Point) within `/etc/irods/core.py` ; as an example, prepend following text to that file:
       ```
       import myinspect, cStringIO
       import irods_types
