@@ -9,7 +9,10 @@ Instructions:
       ```
    1. As user `irods` make a symbolic link in `/etc/irods` to the myinspect module
       ```
-      sudo su - irods -c "ln -s ${SOME_DIR}/myinspect.py /etc/irods"
+      ln -s ${SOME_DIR}/myinspect.py /etc/irods
+      
+      # or - if the local repository is owned by other than irods -
+      [ sudo su - irods -c ] " <insert_above_command_here> "
       ```
    1. create a PEP (Policy Enforcement Point) within `/etc/irods/core.py` ; as an example, prepend following text to that file:
       ```
