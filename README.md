@@ -1,18 +1,19 @@
 # irods_py_rule_pretty_printer
 
-Instructions:
+##Instructions:
+
+As `irods`:
+
    1. Clone this repository
       ```
       SOME_DIR=~/github
       mkdir -p ${SOME_DIR}
-      cd ${SOME_DIR}/irods_py_rule_pretty_printer
+      cd ${SOME_DIR} ; git clone http://github.com/d-w-moore/irods_py_rule_pretty_printer
+      cd irods_py_rule_pretty_printer
       ```
    1. As user `irods` make a symbolic link in `/etc/irods` to the myinspect module
       ```
-      ln -s ${SOME_DIR}/myinspect.py /etc/irods
-      
-      # or - if the local repository is owned by other than irods -
-      [ sudo su - irods -c ] " <insert_above_command_here> "
+      ln -s ${SOME_DIR}/irods_py_rule_pretty_printer/myinspect.py /etc/irods
       ```
    1. create a PEP (Policy Enforcement Point) within `/etc/irods/core.py` ; as an example, prepend following text to that file:
       ```
@@ -41,9 +42,10 @@ Instructions:
           callback.writeLine("serverLog","pep_api_data_obj_copy_post")
           callback.writeLine("serverLog","s -> \n\t{}\n".format(s.getvalue()))
       ```
+      
    1. cause the PEP to fire:
    ```
-   imkdir srcDir ; touch VERSION.json ; iput VERSION.json srcDir
+   imkdir srcDir ; iput ~/VERSION.json srcDir
    imkdir dstDir
    icp srcDir/VERSION.json dstDir/VERSION.json
 
