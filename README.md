@@ -9,7 +9,7 @@ As `irods`:
       SOME_DIR=~/github
       mkdir -p ${SOME_DIR}
       cd ${SOME_DIR} ; git clone http://github.com/d-w-moore/irods_py_rule_pretty_printer
-      cd irods_py_rule_pretty_printer
+      
       ```
    1. As user `irods` make a symbolic link in `/etc/irods` to the myinspect module
       ```
