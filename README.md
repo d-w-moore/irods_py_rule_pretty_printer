@@ -27,7 +27,8 @@ Instructions:
         [ irods_types.char_array, lambda obj: (r_of_s(obj),)
         ],
 
-        [ irods_types.KeyValPair , lambda obj: ( ( str( obj.key[i] ), str( obj.value[i] ) )  for i in range(obj.len) )
+        [ irods_types.KeyValPair , lambda obj: ( ( str( obj.key[i] ), str( obj.value[i] ) )  
+                                               for i in range(obj.len) )
       ],
       )
 
